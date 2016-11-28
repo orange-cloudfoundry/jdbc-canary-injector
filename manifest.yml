@@ -1,0 +1,14 @@
+---
+applications:
+- name: jdbc-canary-injector
+  memory: 512M
+  instances: 1
+  host: jdbc-canary-injector
+  domain: cf.ns.nd-paas.itn.ftgroup
+  path: target/jdbc-canary-injector-0.0.1-SNAPSHOT.jar
+  services:
+    - jdbc-canary-injector-mysql
+    - logs
+  buildpack: java_buildpack
+  env:
+    JBP_LOG_LEVEL: DEBUG
