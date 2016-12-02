@@ -8,7 +8,6 @@ applications:
   path: target/jdbc-canary-injector-0.0.1-SNAPSHOT.jar
   services:
     - jdbc-canary-injector-mysql
-    - logs
   buildpack: java_buildpack
   env:
     JBP_LOG_LEVEL: DEBUG
