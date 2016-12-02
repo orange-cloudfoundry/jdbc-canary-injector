@@ -14,12 +14,6 @@ Then, create on Cloud Foundry the database service:
 ```
 cf create-service p-mysql 100mb jdbc-canary-injector-mysql
 ```
-
-The manifest.yml used to deploy the application on Cloud Foundry also include a log service:
-```
-cf create-service o-logs splunk logs
-```
-
 Finaly, push the application:
 ```
 cf push -f ./manifest.yml
